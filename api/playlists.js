@@ -40,7 +40,7 @@ router.route("/:id").get((req, res) => {
 });
 
 router
-  .route("/:id/tracks")
+  .route("/:id/playlists")
   .get(async (req, res) => {
     const tracks = await getTracksByPlaylistId(req.playlist.id);
     res.send(tracks);
